@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Ryanair Wars Leaderboard</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(players)}">
+        <h2>Player Leaderboard</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Coins</th>
+            </tr>
+            <tr th:each="player : ${players}">
+                <td th:text="${player.id}"><a href="/player/${player.id}">Id</a></td>
+                <td th:text="${player.name}">Name</td>
+                <td th:text="${player.surname}">Surname</td>
+                <td th:text="${player.coins}">Coins</td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>
