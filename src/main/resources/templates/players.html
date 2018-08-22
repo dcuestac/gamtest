@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div th:if="${not #lists.isEmpty(players)}">
         <h2>Player Leaderboard</h2>
         <table class="table table-striped">

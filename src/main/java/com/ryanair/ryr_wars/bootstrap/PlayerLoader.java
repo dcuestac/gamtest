@@ -25,8 +25,10 @@ public class PlayerLoader implements ApplicationListener<ContextRefreshedEvent> 
 
         fulano.setName("David");
         fulano.setSurname("Cuesta");
+        fulano.setEmail("cuestad@ryanair.com");
         fulano.setTyro(true);
         fulano.setCoins(230);
+        fulano.setPhotoFile("cuestad.png");
 
         playerRepository.save(fulano);
         log.info("player saved with id "+fulano.getId());
@@ -34,6 +36,7 @@ public class PlayerLoader implements ApplicationListener<ContextRefreshedEvent> 
         Player mengano= new Player();
         mengano.setName("Francisco");
         mengano.setSurname("Cerrudo");
+        fulano.setEmail("cerrudofryanair.com");
         mengano.setTyro(true);
         mengano.setGuildGuard(true);
         mengano.setSpaceCompanion(true);

@@ -42,16 +42,16 @@ public class Player {
     private Boolean tribalLeader;
 
     @Getter @Setter
-    private String photoUrl;
+    private String photoFile;
 
     @Getter @Setter
     private String email;
 
     @Getter @Setter
-    private String side;
+    private Boolean darkSide;
 
     @Getter @Setter
-    private String level;
+    private String levelPhoto;
 
 
 

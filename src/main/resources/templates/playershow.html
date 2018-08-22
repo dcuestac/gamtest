@@ -7,19 +7,41 @@
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div>
         <h2>My Profile</h2>
         <table class="table table-striped">
             <tr>
                 <th>Player</th><td th:text="${player.name} + ' ' + ${player.surname}">Player</td>
-            <tr>
+            </tr>
             <tr>
                 <th>Coins</th><td th:text="${player.coins}">Coins</td>
+            </tr>
             <tr>
+                <th>Photo</th><td><img width="50" height="50" th:src="'../images/' + ${player.photoFile}"/></td>
+            </tr>
+
             <tr>
-                <th>Zealot</th><td th:text="${player.zealot}">Zealot</td>
-            <tr>
+                <td colspan="2">
+                    <table class="table table-responsive" width="5%">
+                        <tr>
+                            <td th:if="$"><p class="text-center">
+                            </p></td>
+                            <td>Tyro</td>
+                            <td>Truth Devourer</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td><td>Image</td><td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Guild War</td>
+                            <td>Space Companion</td>
+                            <td>Tribal Leader</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
         </table>
         <table>
 
@@ -35,7 +57,7 @@
                 <th>Guild Guard</th>
                 <th>Space Companion</th>
                 <th>Tribal Leader</th>
-                <th>Photo</th>
+
 
             </tr>
             <tr>
@@ -49,7 +71,6 @@
                 <td th:text="${player.guildGuard}">Guild Guard</td>
                 <td th:text="${player.spaceCompanion}">Space Companion</td>
                 <td th:text="${player.tribalLeader}">Tribal Leader</td>
-                <td th:text="${player.photoUrl}">photoUrl</td>
             </tr>
         </table>
 
