@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-
     <title>Ryanair Wars Player Info</title>
-
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
@@ -11,70 +9,35 @@
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div>
         <h2>My Profile</h2>
-        <table class="table table-striped">
-            <tr>
-                <th>Player</th><td th:text="${player.name} + ' ' + ${player.surname}">Player</td>
-            </tr>
-            <tr>
-                <th>Coins</th><td th:text="${player.coins}">Coins</td>
-            </tr>
-            <tr>
-                <th>Photo</th><td><img width="50" height="50" th:src="'../images/' + ${player.photoFile}"/></td>
-            </tr>
-
-            <tr>
-                <td colspan="2">
-                    <table class="table table-responsive" width="5%">
-                        <tr>
-                            <td th:if="$"><p class="text-center">
-                            </p></td>
-                            <td>Tyro</td>
-                            <td>Truth Devourer</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td><td>Image</td><td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>Guild War</td>
-                            <td>Space Companion</td>
-                            <td>Tribal Leader</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <table>
-
-            </tr>
-
-                <th>Id</th>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Coins</th>
-                <th>Zealot</th>
-                <th>Tyro</th>
-                <th>Truth Devourer</th>
-                <th>Guild Guard</th>
-                <th>Space Companion</th>
-                <th>Tribal Leader</th>
-
-
-            </tr>
-            <tr>
-                <td th:text="${player.id}"><a href="/player/${player.id}">Id</a></td>
-                <td th:text="${player.name}">Name</td>
-                <td th:text="${player.surname}">Surname</td>
-                <td th:text="${player.coins}">Coins</td>
-                <td th:text="${player.zealot}">Zealot</td>
-                <td th:text="${player.tyro}">Tyro</td>
-                <td th:text="${player.truthDevourer}">Truth Devourer</td>
-                <td th:text="${player.guildGuard}">Guild Guard</td>
-                <td th:text="${player.spaceCompanion}">Space Companion</td>
-                <td th:text="${player.tribalLeader}">Tribal Leader</td>
-            </tr>
-        </table>
-
+        <img width="50" height="50" th:src="'../images/' + ${player.photoFile}"/>
+        Player: <span th:text="${player.name} + ' ' + ${player.surname}"/><br>
+        Balance: <span th:text="${player.coins}"/><br>
+        Zealot: <span th:text="${player.zealot}"/><br>
+        Tyro: <span th:text="${player.tyro}"/><br>
+        Truth Devourer: <span th:text="${player.truthDevourer}"/><br>
+        Guild Guard: <span th:text="${player.guildGuard}"/><br>
+        Space Companion: <span th:text="${player.spaceCompanion}"/><br>
+        Tribal Leader: <span th:text="${player.tribalLeader}"/>
     </div>
+</div>
+
+<div class="container">
+  <img src="../images/bg_soldier.png" alt="">
+  <div class="row row-top">
+    <div class="box"><img th:if="${player.zealot}" th:src="../images/ryr_zealot.png"/></div>
+    <div class="box" hidden></div>
+    <div class="box"><img th:if="${player.tyro}" th:src="../images/ryr_tyro.png"/></div>
+    <div class="box" hidden></div>
+    <div class="box"><img th:if="${player.truthDevourer}" th:src="../images/ryr_truth_devourer.png"/></div>
+  </div>
+  <div class="row row-bottom">
+    <div class="box"><img th:if="${player.guildGuard}" th:src="../images/ryr_guild_guard.png"/></div>
+    <div class="box" hidden></div>
+    <div class="box"><img th:if="${player.spaceCompanion}" th:src="../images/ryr_space_companion.png"/></div>
+    <div class="box" hidden></div>
+    <div class="box"><img th:if="${player.tribalLeader}" th:src="../images/ryr_tribal_leader.png"/></div>
+  </div>
+  </div>
 </div>
 
 </body>
