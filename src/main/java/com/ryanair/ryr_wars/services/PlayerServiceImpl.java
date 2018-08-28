@@ -32,4 +32,10 @@ public class PlayerServiceImpl implements PlayerService {
     public void savePlayer(Player player) {
         playerRepository.save(player);
     }
+
+    @Override
+    public String getLevelBadge(Player player){
+      Integer level = player.getCoins();
+      return "";
+    }
 }

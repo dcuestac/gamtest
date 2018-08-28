@@ -10,4 +10,6 @@ public interface PlayerService {
     Player getPlayerById(Integer id);
 
     void savePlayer(Player player);
+
+    String getLevelBadge(Player player);
 }

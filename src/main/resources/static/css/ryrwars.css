@@ -1,0 +1,31 @@
+.ryr_container {
+  position: relative;
+  display: inline-block;
+}
+.ryr_row {
+  position: absolute;
+  display: flex;
+  flex-grow: 1;
+}
+.row-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+.row-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0, 0);
+  flex-grow: 1;
+}
+.hidden{
+  visibility:hidden;
+}

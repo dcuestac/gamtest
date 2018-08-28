@@ -21,21 +21,21 @@
     </div>
 </div>
 
-<div class="container">
-  <img src="../images/bg_soldier.png" alt="">
-  <div class="row row-top">
-    <div class="box"><img th:if="${player.zealot}" th:src="../images/ryr_zealot.png"/></div>
+<div class="ryr_container">
+  <img src="../images/bg_soldier.png" height="300" alt="">
+  <div class="ryr_row row-top">
+    <div class="box"><img th:if="${player.zealot}" src="../images/ryr_zealot.png"/></div>
     <div class="box" hidden></div>
-    <div class="box"><img th:if="${player.tyro}" th:src="../images/ryr_tyro.png"/></div>
+    <div class="box"><img th:if="${player.tyro}" src="../images/ryr_tyro.png"/></div>
     <div class="box" hidden></div>
-    <div class="box"><img th:if="${player.truthDevourer}" th:src="../images/ryr_truth_devourer.png"/></div>
+    <div class="box"><img th:if="${player.truthDevourer}" src="../images/ryr_truth_devourer.png"/></div>
   </div>
-  <div class="row row-bottom">
-    <div class="box"><img th:if="${player.guildGuard}" th:src="../images/ryr_guild_guard.png"/></div>
+  <div class="ryr_row row-bottom">
+    <div class="box"><img th:if="${player.guildGuard}" src="../images/ryr_guild_guard.png"/></div>
     <div class="box" hidden></div>
-    <div class="box"><img th:if="${player.spaceCompanion}" th:src="../images/ryr_space_companion.png"/></div>
+    <div class="box"><img th:if="${player.spaceCompanion}" src="../images/ryr_space_companion.png"/></div>
     <div class="box" hidden></div>
-    <div class="box"><img th:if="${player.tribalLeader}" th:src="../images/ryr_tribal_leader.png"/></div>
+    <div class="box"><img th:if="${player.tribalLeader}" src="../images/ryr_tribal_leader.png"/></div>
   </div>
   </div>
 </div>
