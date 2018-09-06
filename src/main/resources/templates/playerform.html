@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+  <title>Ryanair Wars Player Info</title>
+  <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+  <div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <h2>Player Details</h2>
+    <div>
+        <form class="form-horizontal" th:object="${player}" th:action="@{/player}" method="post">
+          <input type="hidden" th:field="*{id}"/>
+          <input type="hidden" th:field="*{version}"/>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" th:field="*{name}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Surname:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" th:field="*{surname}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">email:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" th:field="*{email}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Side:</label>
+            <div class="col-sm-10">
+              <input type="radio" class="form-control" value="1" th:field="*{darkSide}"/>Dark Side
+              <input type="radio" class="form-control" value="0" th:field="*{darkSide}"/>Rebel Side
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Balance:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" th:field="*{coins}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Zealot:</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-control" th:field="*{zealot}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Tyro:</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-control" th:field="*{tyro}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Truth Devourer:</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-control" th:field="*{truthDevourer}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Guild Guard:</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-control" th:field="*{guildGuard}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Space Companion:</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-control" th:field="*{spaceCompanion}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Space Companion:</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-control" th:field="*{tribalLeader}"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Photo:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" th:field="*{photoFile}"/>
+            </div>
+          </div>
+          <div class="row">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </form>
+    </div>
+  </div>

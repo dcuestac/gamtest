@@ -11,13 +11,8 @@
         <h2>My Profile</h2>
         <img width="50" height="50" th:src="'../images/' + ${player.photoFile}"/>
         Player: <span th:text="${player.name} + ' ' + ${player.surname}"/><br>
-        Balance: <span th:text="${player.coins}"/><br>
-        Zealot: <span th:text="${player.zealot}"/><br>
-        Tyro: <span th:text="${player.tyro}"/><br>
-        Truth Devourer: <span th:text="${player.truthDevourer}"/><br>
-        Guild Guard: <span th:text="${player.guildGuard}"/><br>
-        Space Companion: <span th:text="${player.spaceCompanion}"/><br>
-        Tribal Leader: <span th:text="${player.tribalLeader}"/>
+        Balance: <span th:text="${player.coins}"/> coins<br>
+        Dark Side: <span th:text="${player.darkSide}"/>
     </div>
 </div>
 

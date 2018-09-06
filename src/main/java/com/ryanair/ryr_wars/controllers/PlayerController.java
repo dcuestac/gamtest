@@ -1,5 +1,6 @@
 package com.ryanair.ryr_wars.controllers;
 
+import com.ryanair.ryr_wars.domain.Player;
 import com.ryanair.ryr_wars.services.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,5 +30,17 @@ public class PlayerController {
     public String showPlayer(@PathVariable Integer id, Model model){
         model.addAttribute("player",playerService.getPlayerById(id));
         return "playershow";
+    }
+
+    @RequestMapping("player/new")
+    public String newPlayer(Model model){
+        model.addAttribute("player", new Player());
+        return "playerform";
+    }
+
+    @RequestMapping(value = "player", method = RequestMethod.POST)
+    public String savePlayer(Player player){
+        playerService.savePlayer(player);
+        return "redirect:/player/" + player.getId();
     }
 }
