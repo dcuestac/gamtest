@@ -1,7 +1,139 @@
-.ryr_container {
-  position: relative;
-  display: inline-block;
+
+:root {
+  --color-header: #E8CC89;
+  --color-text: white;
+
+  --font-family: 'Roboto', sans-serif;
+  --font-size-l: 24px;
 }
+
+body {
+  font-family: var(--font-family);
+}
+
+.app {
+  background: url(../images/bg-pattern@2x.jpg) center center repeat;
+  height: 100vh;
+}
+.ryr-header__content {
+  display: flex;
+  align-items: center;
+  background: url(../images/header.png) center center repeat;
+  background-size: contain;
+  height: 110px;
+}
+
+.ryr-header__logo1{
+  background: url(../images/logo1.png) center center no-repeat;
+  width: 361px;
+}
+.ryr-header__logo2{
+  flex-grow: 1;
+  /* background: url(../images/bullet-points.png) center center no-repeat; */
+  height: inherit;
+}
+.ryr-header__logo3{
+  background: url(../images/logo2.png) center center no-repeat;
+  width: 431px;
+}
+
+.ry-header__logo {
+  height: 45px;
+  background-size: contain;
+}
+
+.ryr-navbar {
+  position: fixed;
+  left: -100%;
+  height: 100%;
+  z-index: 1;
+  background: url(../images/box-bg.jpg) center center repeat;
+  border-right: 1px solid #333333;
+  transition: transform 1s ease;
+}
+.ryr-navbar--opened {
+  transform: translate3d(100%, 0, 0);
+}
+.ryr-navbar__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ryr-home__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex-grow:1;
+  display: flex;
+
+  margin: 0 24px;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  background: url(../images/box-bg.jpg) center center repeat;
+  margin: 10px 20px;
+  padding: 24px;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: inset 10px 10px 10px #000000;
+}
+
+/* .box {
+  flex-direction: column;
+} */
+
+.box__header {
+  display: flex;
+}
+
+.box__logo {
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+}
+
+/* .box__logo--zealot {
+  background-image: url(../images/ryr_zealot.png);
+}
+.box__logo--tyro {
+  background-image: url(../images/ryr_zealot.png);
+}
+.box__logo--truth-devourer {
+  background-image: url(../images/ryr_truth_devourer.png);
+}
+.box__logo--guild-guard {
+  background-image: url(../images/ryr_guild_guard.png);
+}
+.box__logo--star-alliance {
+  background-image: url(../images/ryr_space_companion.png);
+}
+.box__logo--tribal-leader {
+  background-image: url(../images/ryr_tribal_leader.png);
+} */
+
+.box__title {
+  font-size: var(--font-size-l);
+  color: var(--color-header);
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.box__description{
+  color: var(--color-text);
+  padding: 20px 0;
+}
+
+
 .ryr_row {
   position: absolute;
   display: flex;
@@ -19,7 +151,7 @@
   right: 0;
   height: 50px;
 }
-.box{
+.box--item{
   display: flex;
   align-items: center;
   justify-content: center;

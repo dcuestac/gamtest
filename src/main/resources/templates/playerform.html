@@ -7,7 +7,7 @@
 <body>
   <div class="container">
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-    <h2>Player Details</h2>
+    <h5>Player Details</h5>
     <div>
         <form class="form-horizontal" th:object="${player}" th:action="@{/player}" method="post">
           <input type="hidden" th:field="*{id}"/>

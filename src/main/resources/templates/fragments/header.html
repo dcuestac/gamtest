@@ -9,12 +9,21 @@
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
 
+    <script type="text/javascript" th:src="@{/script/script.js}"></script>
+
     <link href="../static/css/ryrwars.css"
           th:href="@{/css/ryrwars.css}" rel="stylesheet" media="screen"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <div th:fragment="header">
+<div class="ryr-header__container" th:fragment="header">
+    <div class="ryr-header__content">
+        <div id="burguer" class="ryr-header__burguer">H</div>
+        <div class="ryr-header__logo1 ry-header__logo "></div>
+        <div class="ryr-header__logo2"></div>
+        <div class="ryr-header__logo3 ry-header__logo "></div>
+    </div>
+    <!-- <div th:fragment="header"> -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -27,7 +36,7 @@
                 </div>
             </div>
         </nav>
-    </div>
+    <!-- </div> -->
 </div>
 </body>
 </html>

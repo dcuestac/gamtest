@@ -12,4 +12,6 @@ public interface PlayerService {
     void savePlayer(Player player);
 
     String getLevelBadge(Player player);
+
+    void deletePlayer(Integer id);
 }

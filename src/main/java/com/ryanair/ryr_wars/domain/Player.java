@@ -18,6 +18,9 @@ public class Player {
     private Integer coins;
 
     @Getter @Setter
+    private Integer prestige;
+
+    @Getter @Setter
     private String name;
 
     @Getter @Setter

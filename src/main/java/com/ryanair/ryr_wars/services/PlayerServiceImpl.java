@@ -38,4 +38,10 @@ public class PlayerServiceImpl implements PlayerService {
       Integer level = player.getCoins();
       return "";
     }
+
+    @Override
+    public void deletePlayer(Integer id) {
+        Player player = getPlayerById(id);
+        playerRepository.delete(player);
+    }
 }

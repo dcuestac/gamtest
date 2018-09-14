@@ -43,4 +43,16 @@ public class PlayerController {
         playerService.savePlayer(player);
         return "redirect:/player/" + player.getId();
     }
+
+    @RequestMapping("player/edit/{id}")
+    public String edit(@PathVariable Integer id, Model model){
+        model.addAttribute("player", playerService.getPlayerById(id));
+        return "playerform";
+    }
+
+    @RequestMapping("player/delete/{id}")
+    public String delete(@PathVariable Integer id){
+        playerService.deletePlayer(id);
+        return "redirect:/products";
+    }
 }
